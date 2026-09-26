@@ -8,6 +8,7 @@ import { IndustriesComponent } from './components/industries/industries';
 import { ProcessComponent } from './components/process/process';
 import { FooterComponent } from './components/footer/footer';
 import { AboutPage } from './components/about/about';
+import { CareersPage } from './components/careers/careers';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { AboutPage } from './components/about/about';
     IndustriesComponent,
     ProcessComponent,
     AboutPage,
+    CareersPage,
     FooterComponent
   ],
   template: `
@@ -31,8 +33,10 @@ import { AboutPage } from './components/about/about';
         <app-solutions></app-solutions>
         <app-product></app-product>
         <app-about></app-about>
+        <app-careers></app-careers>
         <app-industries></app-industries>
         <app-process></app-process>
+        
       </main>
       <app-footer></app-footer>
     </div>
