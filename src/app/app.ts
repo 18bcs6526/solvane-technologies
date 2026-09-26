@@ -1,12 +1,38 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NavbarComponent } from './components/navbar/navbar';
+import { HeroComponent } from './components/hero/hero';
+import { SolutionsComponent } from './components/solutions/solutions';
+import { ProductComponent } from './components/product/product';
+import { IndustriesComponent } from './components/industries/industries';
+import { ProcessComponent } from './components/process/process';
+import { FooterComponent } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [
+    CommonModule, 
+    NavbarComponent, 
+    HeroComponent, 
+    SolutionsComponent, 
+    ProductComponent,
+    IndustriesComponent,
+    ProcessComponent,
+    FooterComponent
+  ],
+  template: `
+    <div class="min-h-screen bg-[#070b14] selection:bg-blue-600 selection:text-white">
+      <app-navbar></app-navbar>
+      <main>
+        <app-hero></app-hero>
+        <app-solutions></app-solutions>
+        <app-product></app-product>
+        <app-industries></app-industries>
+        <app-process></app-process>
+      </main>
+      <app-footer></app-footer>
+    </div>
+  `
 })
-export class App {
-  protected readonly title = signal('solvane-web');
-}
+export class App {}
