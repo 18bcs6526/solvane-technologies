@@ -1,44 +1,35 @@
-<!-- PART 1: WHY SOLVANE (DARK SECTION) -->
-<section class="py-24 bg-[#080d1a] border-t border-slate-800/80 text-white relative">
+<!-- WHY SOLVANE -->
+<section class="py-20 bg-[#060a14] border-t border-slate-800 text-white">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
       
-      <!-- Left Copy -->
       <div class="lg:col-span-4">
-        <span class="inline-block text-xs uppercase font-bold tracking-widest text-blue-400 mb-3">
-          Why Solvane
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+        <span class="text-xs uppercase font-bold tracking-widest text-slate-400 block mb-2">WHY SOLVANE</span>
+        <h2 class="text-3xl font-extrabold text-white tracking-tight leading-tight">
           More Than Just a Technology Partner
         </h2>
-        <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+        <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
           We combine deep technical expertise with a business-first mindset to deliver solutions that create lasting value.
         </p>
-
         <div class="mt-6">
-          <a
-            href="#contact"
-            class="inline-flex items-center gap-2 bg-blue-600/90 hover:bg-blue-600 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition shadow-md shadow-blue-600/20"
-          >
+          <a href="#contact" class="inline-flex items-center gap-1.5 bg-blue-600 text-white text-xs font-semibold px-5 py-2.5 rounded-full hover:bg-blue-500 transition">
             <span>Our Approach</span>
             <span>→</span>
           </a>
         </div>
       </div>
 
-      <!-- Right 4 Feature Badges -->
-      <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div
-          *ngFor="let p of pillars"
-          class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 hover:border-slate-700 transition"
-        >
-          <div class="w-10 h-10 rounded-xl bg-blue-950/80 border border-blue-800/50 flex items-center justify-center text-blue-400 mb-4">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="p.icon" />
-            </svg>
+      <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div *ngFor="let p of pillars" class="bg-white text-slate-900 rounded-xl p-5 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-3">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="p.icon" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-sm text-slate-900 mb-1">{{ p.title }}</h3>
+            <p class="text-[11px] text-slate-500 leading-relaxed">{{ p.desc }}</p>
           </div>
-          <h3 class="font-bold text-sm text-white mb-1.5">{{ p.title }}</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">{{ p.desc }}</p>
         </div>
       </div>
 
@@ -46,51 +37,28 @@
   </div>
 </section>
 
-<!-- PART 2: HOW WE WORK / PROCESS (LIGHT SECTION) -->
-<section class="py-24 bg-slate-50 text-slate-900 border-t border-slate-200">
+<!-- HOW WE WORK -->
+<section class="py-20 bg-slate-50 text-slate-900 border-t border-slate-200">
   <div class="max-w-7xl mx-auto px-6">
-    
-    <div class="text-center max-w-xl mx-auto mb-16">
-      <span class="inline-block text-xs uppercase font-bold tracking-widest text-blue-600 mb-2">
-        How We Work
-      </span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-        A Simple Process, Powerful Results
-      </h2>
-      <p class="text-slate-500 text-sm mt-3">
-        From idea to impact, we keep things simple, transparent and collaborative at every step.
-      </p>
+    <div class="max-w-xl mb-12">
+      <span class="text-xs uppercase font-bold tracking-widest text-slate-400 block mb-1">HOW WE WORK</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">A Simple Process, Powerful Results</h2>
+      <p class="text-slate-500 text-xs mt-2">From idea to impact, we keep things simple, transparent and collaborative at every step.</p>
     </div>
 
-    <!-- 4-Step Process Pipeline -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
-      <div
-        *ngFor="let item of steps; let last = last"
-        class="relative bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition group"
-      >
-        <!-- Step Indicator Number -->
-        <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-mono font-bold text-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-md shadow-blue-500/20">
+      <div *ngFor="let item of steps; let last = last" class="relative bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+        <div class="w-8 h-8 rounded-full bg-blue-600 text-white font-mono font-bold text-xs flex items-center justify-center mb-4">
           {{ item.step }}
         </div>
+        <h3 class="font-bold text-sm text-slate-900 mb-1">{{ item.title }}</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">{{ item.description }}</p>
 
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-          {{ item.title }}
-        </h3>
-        <p class="text-xs text-slate-600 leading-relaxed">
-          {{ item.description }}
-        </p>
-
-        <!-- Horizontal Step Connector Arrow (hidden on last item & mobile) -->
-        <div
-          *ngIf="!last"
-          class="hidden md:flex absolute -right-3.5 top-11 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-slate-100 border border-slate-200 items-center justify-center text-slate-400"
-        >
-          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
+        <!-- Connector Arrow -->
+        <div *ngIf="!last" class="hidden md:block absolute -right-3 top-9 text-slate-300 text-xs font-bold">
+          →
         </div>
       </div>
     </div>
-
   </div>
 </section>
