@@ -7,6 +7,7 @@ import { ProductComponent } from './components/product/product';
 import { IndustriesComponent } from './components/industries/industries';
 import { ProcessComponent } from './components/process/process';
 import { FooterComponent } from './components/footer/footer';
+import { AboutPage } from './components/about/about';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import { FooterComponent } from './components/footer/footer';
     ProductComponent,
     IndustriesComponent,
     ProcessComponent,
+    AboutPage,
     FooterComponent
   ],
   template: `
@@ -28,6 +30,7 @@ import { FooterComponent } from './components/footer/footer';
         <app-hero></app-hero>
         <app-solutions></app-solutions>
         <app-product></app-product>
+        <app-about></app-about>
         <app-industries></app-industries>
         <app-process></app-process>
       </main>

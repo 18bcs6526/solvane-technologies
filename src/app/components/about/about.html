@@ -1,0 +1,151 @@
+<section id="about" class="scroll-mt-20 min-h-screen bg-[#060a12] text-white">
+
+  <!-- 1. HERO / HEADER -->
+  <div class="relative pt-24 pb-20 bg-gradient-to-b from-[#0a0f24] via-[#060a12] to-[#060a12] overflow-hidden">
+    <div class="absolute top-0 left-1/4 w-[600px] h-[350px] bg-blue-600/15 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-1/2 right-10 w-[450px] h-[350px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      
+      <div class="hidden lg:flex justify-end mb-6 text-[11px] font-mono tracking-widest text-slate-400 gap-3">
+        <span>IDEAS</span>
+        <span class="text-blue-500">→</span>
+        <span>PRODUCTS</span>
+        <span class="text-blue-500">→</span>
+        <span>IMPACT</span>
+      </div>
+
+      <div class="max-w-3xl">
+        <span class="inline-block text-xs uppercase font-bold tracking-[0.2em] text-blue-400 mb-4">
+          About Solvane
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12] mb-6">
+          Pioneering Digital Simplicity <br />
+          <span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
+            For Growing Businesses.
+          </span>
+        </h1>
+        <p class="text-slate-400 text-base sm:text-lg leading-relaxed mb-8">
+          We combine enterprise software engineering with a product-first mindset. Our mission is to eliminate friction, automate workflows, and build platforms that help companies scale effortlessly.
+        </p>
+
+        <!-- Stats Bar -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-slate-800/80">
+          <div *ngFor="let s of stats">
+            <div class="text-2xl sm:text-3xl font-bold font-mono text-white">{{ s.value }}</div>
+            <div class="text-[11px] text-slate-400 font-medium uppercase tracking-wider mt-1">{{ s.label }}</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. MISSION & VALUES (LIGHT CONTRAST SECTION) -->
+  <div class="bg-white text-slate-900 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+        <div class="lg:col-span-5">
+          <span class="text-xs uppercase font-bold tracking-widest text-blue-600 block mb-2">Our Mission</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 leading-snug">
+            Building software that accelerates business potential.
+          </h2>
+        </div>
+        <div class="lg:col-span-7">
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Modern enterprises face fragmented tools, manual data reconciliation, and sluggish legacy systems. Solvane was created to replace disconnected processes with cohesive, real-time technology architectures. We build software that works for you, freeing your team to focus on growth.
+          </p>
+        </div>
+      </div>
+
+      <!-- Core Values -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div *ngFor="let v of values" class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 hover:shadow-lg hover:border-blue-300 transition-all duration-300">
+          <span class="w-8 h-8 rounded-full bg-blue-600 text-white font-mono font-bold text-xs flex items-center justify-center mb-5">
+            {{ v.step }}
+          </span>
+          <h3 class="font-bold text-base text-slate-900 mb-2">{{ v.title }}</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">{{ v.description }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3. ENGINEERING STANDARDS (DARK GRID) -->
+  <div class="py-24 bg-[#080d1a] border-t border-slate-800/80 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="max-w-2xl mb-16">
+        <span class="text-xs uppercase font-bold tracking-widest text-blue-400 block mb-2">Engineering Philosophy</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">The Solvane Standard</h2>
+        <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+          Every solution we ship is grounded in durability, speed, and real-world utility.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80">
+          <div class="w-10 h-10 rounded-xl bg-blue-950 border border-blue-800 text-blue-400 flex items-center justify-center font-bold text-base mb-4">
+            ⚡
+          </div>
+          <h3 class="font-bold text-base text-white mb-2">High-Throughput APIs</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            REST and event-driven backends designed using Spring Boot and reactive architecture, delivering sub-100ms response latencies.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80">
+          <div class="w-10 h-10 rounded-xl bg-indigo-950 border border-indigo-800 text-indigo-400 flex items-center justify-center font-bold text-base mb-4">
+            🛡️
+          </div>
+          <h3 class="font-bold text-base text-white mb-2">Data Isolation & Security</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Enterprise RBAC, continuous encrypted backups, and end-to-end compliance protocols safeguarding business data.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80">
+          <div class="w-10 h-10 rounded-xl bg-purple-950 border border-purple-800 text-purple-400 flex items-center justify-center font-bold text-base mb-4">
+            🚀
+          </div>
+          <h3 class="font-bold text-base text-white mb-2">Modern Micro-Frontends</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Fluid user interfaces built with Angular standalone components and Tailwind CSS for responsive desktop and mobile execution.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. LEADERSHIP & TEAM -->
+  <div class="py-24 bg-white text-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <span class="text-xs uppercase font-bold tracking-widest text-blue-600 block mb-2">Our People</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">The Team Behind the Technology</h2>
+        </div>
+        <p class="text-slate-500 text-xs sm:text-sm mt-3 md:mt-0 max-w-sm">
+          A collective of distributed software engineers, designers, and system architects committed to quality.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div *ngFor="let member of team" class="group">
+          <div class="relative h-72 rounded-2xl overflow-hidden border border-slate-200 mb-4 bg-slate-100 shadow-sm">
+            <img [src]="member.image" [alt]="member.name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          </div>
+          <h3 class="font-bold text-base text-slate-900">{{ member.name }}</h3>
+          <p class="text-xs text-slate-500 mt-0.5">{{ member.role }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
