@@ -1,8 +1,3 @@
-
-
-
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +8,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#070b14] text-slate-100 font-sans antialiased;
+    @apply bg-brand-dark text-slate-100 font-sans antialiased;
     overflow-x: hidden;
   }
 }
