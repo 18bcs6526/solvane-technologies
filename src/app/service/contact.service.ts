@@ -17,8 +17,8 @@ export interface ContactLead {
 })
 export class ContactService {
   // This points to your Spring Boot local development server
-  private apiUrl = 'http://localhost:8080/api/v1/contact';
-
+  //private apiUrl = 'http://localhost:8080/api/v1/contact';
+private apiUrl = 'https://solvane-backend-1.onrender.com';
   constructor(private http: HttpClient) {}
 
   submitLead(lead: ContactLead): Observable<string> {
