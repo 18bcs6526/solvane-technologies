@@ -1,99 +1,25 @@
-<header
-  class="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md border-b"
-  [ngClass]="{
-    'bg-[#070b14]/90 border-slate-800/80 shadow-lg shadow-black/20': isScrolled,
-    'bg-[#070b14]/75 border-slate-800/40': !isScrolled
-  }"
->
-  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-    <!-- Logo Brand -->
-    <a href="#home" class="flex items-center gap-2.5 group">
-      <!-- Icon emblem -->
-      <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-md shadow-blue-500/30 group-hover:scale-105 transition-transform duration-200">
-        <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      </div>
-      <div class="flex flex-col">
-        <span class="text-lg font-bold tracking-tight text-white flex items-center gap-1 leading-none">
-          SOLVANE
-        </span>
-        <span class="text-[9px] uppercase tracking-[0.2em] text-slate-400 font-semibold mt-1">
-          Technologies
-        </span>
-      </div>
-    </a>
-
-    <!-- Desktop Navigation Links -->
-    <nav class="hidden md:flex items-center gap-7">
-      <ng-container *ngFor="let item of navItems">
-        <a
-          [href]="item.href"
-          class="text-xs font-medium text-slate-300 hover:text-white transition-colors duration-200 flex items-center gap-1 group"
-        >
-          <span>{{ item.label }}</span>
-          <svg
-            *ngIf="item.hasDropdown"
-            class="w-3 h-3 text-slate-400 group-hover:text-white transition-transform group-hover:translate-y-0.5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </a>
-      </ng-container>
-    </nav>
-
-    <!-- Header Actions (CTA) -->
-    <div class="hidden md:flex items-center">
-      <a
-        href="#contact"
-        class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-medium px-5 py-2.5 rounded-full shadow-lg shadow-blue-600/25 transition-all duration-200 hover:shadow-blue-600/40 active:scale-95"
-      >
-        <span>Start a Conversation</span>
-        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </a>
+<nav [class.bg-[#060a12]/95]="isScrolled" [class.backdrop-blur-md]="isScrolled" class="fixed w-full z-50 top-0 transition-all duration-300 border-b border-slate-800/50 text-white">
+  <div class="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-lg">S</div>
+      <span class="font-bold tracking-widest text-sm uppercase">Solvane<br><span class="text-[8px] text-slate-400">Technologies</span></span>
     </div>
 
-    <!-- Mobile Hamburger Toggle -->
-    <button
-      (click)="toggleMobileMenu()"
-      class="md:hidden text-slate-400 hover:text-white p-2 focus:outline-none"
-      aria-label="Toggle Menu"
-    >
-      <svg *ngIf="!isMobileMenuOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-      </svg>
-      <svg *ngIf="isMobileMenuOpen" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Dropdown Menu -->
-  <div
-    *ngIf="isMobileMenuOpen"
-    class="md:hidden bg-[#070b14]/95 border-b border-slate-800 px-6 py-5 flex flex-col gap-4"
-  >
-    <a
-      *ngFor="let item of navItems"
-      [href]="item.href"
-      (click)="closeMobileMenu()"
-      class="text-sm font-medium text-slate-300 hover:text-white py-1 flex items-center justify-between"
-    >
-      <span>{{ item.label }}</span>
-      <span *ngIf="item.hasDropdown" class="text-xs text-slate-500">▾</span>
-    </a>
-    <a
-      href="#contact"
-      (click)="closeMobileMenu()"
-      class="mt-2 w-full text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-semibold py-3 rounded-full"
-    >
+    <!-- Replace your desktop links section with this: -->
+<div class="hidden lg:flex items-center gap-8 text-[13px] font-medium text-slate-300">
+  <a routerLink="/" class="text-white">Home</a>
+  <a routerLink="/about" class="hover:text-white transition">About</a>
+  
+  <a routerLink="/" fragment="solutions" class="hover:text-white transition">Solutions</a>
+  <a routerLink="/" fragment="products" class="hover:text-white transition">Products</a>
+  <a routerLink="/" fragment="industries" class="hover:text-white transition">Industries</a>
+  <a routerLink="/" fragment="technology" class="hover:text-white transition">Technology</a>
+  
+  <a routerLink="/careers" class="hover:text-white transition">Careers</a>
+  <a routerLink="/contact" class="hover:text-white transition">Contact</a>
+</div>
+    <a routerLink="/contact" class="hidden lg:inline-flex bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-6 py-2.5 rounded-full transition">
       Start a Conversation →
     </a>
   </div>
-</header>
+</nav>

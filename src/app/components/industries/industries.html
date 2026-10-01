@@ -1,69 +1,27 @@
-<section id="industries" class="bg-white text-slate-900 py-24 lg:py-32 relative">
-  <div class="max-w-7xl mx-auto px-6">
+<section id="industries" class="py-24 bg-white text-slate-900 overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
     
-    <!-- Section Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16">
-      <div class="max-w-2xl">
-        <span class="inline-block text-xs uppercase font-bold tracking-widest text-blue-600 mb-3">
-          Industries We Serve
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-          Technology for Every Industry
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-4 leading-relaxed">
-          We understand that every industry has unique challenges. That's why we build solutions that fit your business, not the other way around.
-        </p>
-      </div>
-
-      <div class="mt-6 md:mt-0">
-        <a
-          href="#contact"
-          class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-6 py-3 rounded-full shadow-md shadow-blue-500/20 transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5"
-        >
-          <span>Explore All Industries</span>
-          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
-        </a>
-      </div>
+    <div class="lg:col-span-3">
+      <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 block mb-3">Industries We Serve</span>
+      <h2 class="text-3xl font-extrabold tracking-tight mb-4">Technology for Every Industry</h2>
+      <p class="text-slate-600 text-sm leading-relaxed mb-8">
+        We understand that every industry has unique challenges. That's why we build solutions that fit your business, not the other way around.
+      </p>
+      <a href="#" class="inline-flex bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-6 py-3 rounded-full transition">
+        Explore All Industries →
+      </a>
     </div>
 
-    <!-- 5-Column Responsive Card Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
-      <div
-        *ngFor="let ind of industries"
-        class="group relative h-80 sm:h-96 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-slate-200 cursor-pointer"
-      >
-        <!-- Background Image with Zoom on Hover -->
-        <img
-          [src]="ind.image"
-          [alt]="ind.title"
-          class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
-        />
-
-        <!-- Gradient Dark Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent opacity-90 group-hover:opacity-95 transition-opacity"></div>
-
-        <!-- Card Content -->
-        <div class="absolute inset-0 p-6 flex flex-col justify-end text-white z-10">
-          <div class="w-8 h-8 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:border-blue-500 transition-colors">
-            <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-            </svg>
-          </div>
-
-          <h3 class="text-lg font-bold tracking-tight text-white mb-1.5 group-hover:text-blue-300 transition-colors">
-            {{ ind.title }}
-          </h3>
-          <p class="text-xs text-slate-300 leading-relaxed line-clamp-2">
-            {{ ind.description }}
-          </p>
-
-          <div class="mt-4 flex items-center gap-1.5 text-[11px] font-semibold text-blue-400 group-hover:text-white transition-colors">
-            <span>Learn more</span>
-            <span>→</span>
+    <div class="lg:col-span-9 flex gap-6 overflow-x-auto pb-4 hide-scrollbar">
+      <div *ngFor="let ind of industries" class="min-w-[220px] max-w-[220px] flex-shrink-0">
+        <div class="h-32 bg-slate-100 rounded-2xl mb-4 overflow-hidden relative">
+          <img [src]="ind.img" [alt]="ind.title" class="w-full h-full object-cover">
+          <div class="absolute -bottom-4 left-4 w-10 h-10 bg-white rounded-lg shadow flex items-center justify-center text-blue-600 border border-slate-100">
+            {{ ind.icon }}
           </div>
         </div>
+        <h3 class="font-bold text-sm mt-6 mb-2">{{ ind.title }}</h3>
+        <p class="text-[11px] text-slate-500 leading-relaxed">{{ ind.desc }}</p>
       </div>
     </div>
 

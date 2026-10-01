@@ -1,132 +1,47 @@
-<section id="home" class="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden bg-gradient-to-b from-[#0a0f24] via-[#070b14] to-[#070b14]">
-  <!-- Background Glow Orb Effects -->
-  <div class="absolute -top-32 -left-32 w-96 h-96 bg-blue-600/15 rounded-full blur-[120px] pointer-events-none"></div>
-  <div class="absolute top-1/3 right-0 w-[500px] h-[500px] bg-indigo-600/15 rounded-full blur-[140px] pointer-events-none"></div>
-
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
-    
-    <!-- LEFT COPY -->
-    <div class="lg:col-span-6 flex flex-col items-start">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/70 border border-blue-800/50 text-[11px] font-semibold uppercase tracking-wider text-blue-400 mb-6">
-        <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
-        Solvane Technologies
-      </div>
-
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12] mb-6">
-        Simplifying Business <br />
-        <span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-          Through Technology.
-        </span>
+<section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#060a12] text-white overflow-hidden">
+  <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-blue-900/20 to-transparent pointer-events-none"></div>
+  
+  <div class="max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+    <div>
+      <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-4 block">Solvane Technologies</span>
+      <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+        Simplifying Business <br>
+        <span class="text-blue-500">Through Technology.</span>
       </h1>
-
-      <p class="text-slate-400 text-base sm:text-lg mb-8 max-w-xl leading-relaxed">
+      <p class="text-slate-400 text-lg mb-8 max-w-lg">
         We build scalable software, SaaS platforms and intelligent digital solutions that help businesses operate smarter and grow faster.
       </p>
-
-      <!-- CTA Buttons -->
-      <div class="flex flex-wrap items-center gap-4 mb-12">
-        <a
-          href="#contact"
-          class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-semibold px-6 py-3.5 rounded-full shadow-lg shadow-blue-600/25 transition-all duration-200 hover:shadow-blue-600/40 hover:-translate-y-0.5"
-        >
-          <span>Start a Conversation</span>
-          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-          </svg>
+      
+      <div class="flex flex-wrap items-center gap-4 mb-16">
+        <a routerLink="/contact" class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-8 py-3.5 rounded-full transition">
+          Start a Conversation →
         </a>
-
-        <a
-          href="#solutions"
-          class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs font-medium text-slate-300 bg-slate-900/60 border border-slate-700/80 hover:bg-slate-800 hover:text-white hover:border-slate-600 transition-all duration-200"
-        >
-          <span>Explore Our Solutions</span>
+        <a href="#solutions" class="border border-slate-600 hover:bg-slate-800 text-white text-sm font-semibold px-8 py-3.5 rounded-full transition">
+          Explore Our Solutions
         </a>
       </div>
 
-      <!-- Live Stats Bar -->
-      <div class="w-full grid grid-cols-3 gap-6 pt-8 border-t border-slate-800/80">
-        <div *ngFor="let stat of stats">
-          <div class="text-2xl sm:text-3xl font-bold tracking-tight text-white font-mono">{{ stat.value }}</div>
-          <div class="text-[11px] sm:text-xs text-slate-400 uppercase tracking-wider font-medium mt-1">{{ stat.label }}</div>
+      <div class="flex items-center gap-12 border-t border-slate-800 pt-8">
+        <div>
+          <div class="text-2xl font-bold flex items-center gap-2"><span class="w-4 h-4 text-blue-500">⬡</span> 0+</div>
+          <div class="text-[11px] text-slate-400 mt-1 uppercase tracking-wider">Projects Delivered</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold flex items-center gap-2"><span class="w-4 h-4 text-blue-500">👥</span> 0+</div>
+          <div class="text-[11px] text-slate-400 mt-1 uppercase tracking-wider">Happy Clients</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold flex items-center gap-2"><span class="w-4 h-4 text-blue-500">🛡️</span> 99.9%</div>
+          <div class="text-[11px] text-slate-400 mt-1 uppercase tracking-wider">Uptime & Reliability</div>
         </div>
       </div>
     </div>
 
-    <!-- RIGHT DASHBOARD MOCKUP -->
-    <div class="lg:col-span-6 relative">
-      <!-- Glow aura behind the frame -->
-      <div class="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-indigo-600/10 to-transparent rounded-3xl blur-2xl -z-10 transform scale-95"></div>
-
-      <!-- Device Window Frame -->
-      <div class="rounded-2xl bg-[#0c1222]/90 border border-slate-700/70 shadow-2xl backdrop-blur-xl p-5 md:p-6 transition hover:border-slate-600">
-        
-        <!-- Window Chrome / Header -->
-        <div class="flex items-center justify-between border-b border-slate-800/80 pb-4 mb-5">
-          <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-            <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-            <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-          </div>
-          <span class="text-[11px] text-slate-400 font-mono tracking-wide">solvane-business.dashboard.app</span>
-          <div class="flex gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          </div>
-        </div>
-
-        <!-- Dashboard Top Metric Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-5">
-          <div *ngFor="let m of dashboardMetrics" class="bg-slate-900/80 border border-slate-800 rounded-xl p-3.5 flex flex-col justify-between">
-            <span class="text-[11px] text-slate-400 font-medium">{{ m.label }}</span>
-            <div class="mt-2 flex items-baseline justify-between">
-              <span class="text-base font-bold text-white">{{ m.value }}</span>
-              <span class="text-[10px] text-emerald-400 font-semibold">{{ m.change }}</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Simulated Visual Analytics Graph -->
-        <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-4 mb-4">
-          <div class="flex items-center justify-between text-xs text-slate-400 mb-3">
-            <span class="font-medium">Performance Trajectory</span>
-            <span class="text-[10px] text-blue-400 bg-blue-950/60 px-2 py-0.5 rounded border border-blue-800/50">Live Sync</span>
-          </div>
-          <!-- SVG Sparkline Trend Graph -->
-          <svg class="w-full h-24 text-blue-500 stroke-current" viewBox="0 0 400 100" fill="none">
-            <path
-              d="M0,80 Q50,40 100,60 T200,30 T300,45 T400,10"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
-            <path
-              d="M0,80 Q50,40 100,60 T200,30 T300,45 T400,10 L400,100 L0,100 Z"
-              fill="url(#blue-gradient)"
-              opacity="0.2"
-            />
-            <defs>
-              <linearGradient id="blue-gradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#3b82f6" />
-                <stop offset="100%" stop-color="#3b82f6" stop-opacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-
-        <!-- Activity Feed List -->
-        <div class="bg-slate-900/50 rounded-xl p-3 border border-slate-800/60">
-          <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-2">Live Logs</div>
-          <div class="space-y-2">
-            <div *ngFor="let act of recentActivities" class="flex items-center justify-between text-xs text-slate-300">
-              <span class="flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                {{ act.text }}
-              </span>
-              <span class="text-[10px] text-slate-500 font-mono">{{ act.time }}</span>
-            </div>
-          </div>
-        </div>
-
+    <div class="relative w-full h-[300px] lg:h-[500px]">
+      <div class="absolute -top-10 right-0 hidden lg:flex text-[10px] font-mono tracking-widest text-slate-500 gap-3">
+        <span>IDEAS</span> <span class="text-blue-500">→</span> <span>PRODUCTS</span> <span class="text-blue-500">→</span> <span>IMPACT</span>
       </div>
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=1000" alt="Dashboard Mockup" class="w-full h-full object-cover rounded-xl shadow-[0_0_50px_rgba(37,99,235,0.15)]" />
     </div>
-
   </div>
 </section>
