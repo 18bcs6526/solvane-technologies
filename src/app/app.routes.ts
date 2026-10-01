@@ -13,10 +13,10 @@ export const routes: Routes = [
     path: 'careers',
     loadComponent: () => import('./pages/careers/careers').then(m => m.CareersPage)
   },
-//   {
-//     path: 'contact',
-//     loadComponent: () => import('./pages/contact-page/contact-page').then(m => m.ContactPageComponent)
-//   },
+  {
+    path: 'contact',
+    loadComponent: () => import('./pages/contact-page/contact-page').then(m => m.ContactPageComponent)
+  },
   {
     path: '**',
     redirectTo: ''
