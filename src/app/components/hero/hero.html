@@ -1,161 +1,47 @@
-<section id="home" class="relative pt-28 pb-20 lg:pt-36 lg:pb-28 bg-[#060a12] text-white overflow-hidden">
-  <!-- Subtle top ambient light -->
-  <div class="absolute top-0 left-1/4 w-[600px] h-[350px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none"></div>
+<section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-[#060a12] text-white overflow-hidden">
+  <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-blue-900/20 to-transparent pointer-events-none"></div>
+  
+  <div class="max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+    <div>
+      <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-4 block">Solvane Technologies</span>
+      <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+        Simplifying Business <br>
+        <span class="text-blue-500">Through Technology.</span>
+      </h1>
+      <p class="text-slate-400 text-lg mb-8 max-w-lg">
+        We build scalable software, SaaS platforms and intelligent digital solutions that help businesses operate smarter and grow faster.
+      </p>
+      
+      <div class="flex flex-wrap items-center gap-4 mb-16">
+        <a routerLink="/contact" class="bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold px-8 py-3.5 rounded-full transition">
+          Start a Conversation →
+        </a>
+        <a href="#solutions" class="border border-slate-600 hover:bg-slate-800 text-white text-sm font-semibold px-8 py-3.5 rounded-full transition">
+          Explore Our Solutions
+        </a>
+      </div>
 
-  <div class="max-w-7xl mx-auto px-6">
-    <!-- Top Micro Tagline (Right Aligned) -->
-    <div class="hidden lg:flex justify-end mb-6 text-[11px] font-mono tracking-widest text-slate-400 gap-3">
-      <span>IDEAS</span>
-      <span class="text-blue-500">→</span>
-      <span>PRODUCTS</span>
-      <span class="text-blue-500">→</span>
-      <span>IMPACT</span>
+      <div class="flex items-center gap-12 border-t border-slate-800 pt-8">
+        <div>
+          <div class="text-2xl font-bold flex items-center gap-2"><span class="w-4 h-4 text-blue-500">⬡</span> 0+</div>
+          <div class="text-[11px] text-slate-400 mt-1 uppercase tracking-wider">Projects Delivered</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold flex items-center gap-2"><span class="w-4 h-4 text-blue-500">👥</span> 0+</div>
+          <div class="text-[11px] text-slate-400 mt-1 uppercase tracking-wider">Happy Clients</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold flex items-center gap-2"><span class="w-4 h-4 text-blue-500">🛡️</span> 99.9%</div>
+          <div class="text-[11px] text-slate-400 mt-1 uppercase tracking-wider">Uptime & Reliability</div>
+        </div>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      
-      <!-- Left Column Copy -->
-      <div class="lg:col-span-6 z-10">
-        <span class="text-xs uppercase font-bold tracking-[0.2em] text-slate-400 mb-4 block">
-          Solvane Technologies
-        </span>
-
-        <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-white leading-[1.12] mb-6">
-          Simplifying Business <br />
-          <span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent">
-            Through Technology.
-          </span>
-        </h1>
-
-        <p class="text-slate-400 text-sm sm:text-base mb-8 max-w-xl leading-relaxed">
-          We build scalable software, SaaS platforms and intelligent digital solutions that help businesses operate smarter and grow faster.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-wrap items-center gap-4 mb-12">
-          <a
-            href="#contact"
-            class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-semibold px-6 py-3.5 rounded-full shadow-lg shadow-blue-600/30 transition-all hover:-translate-y-0.5"
-          >
-            <span>Start a Conversation</span>
-            <span>→</span>
-          </a>
-
-          <a
-            href="#solutions"
-            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs font-medium text-slate-300 bg-slate-900/80 border border-slate-700 hover:border-slate-500 hover:text-white transition-all"
-          >
-            <span>Explore Our Solutions</span>
-          </a>
-        </div>
-
-        <!-- Metrics Strip -->
-        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-800/80 max-w-md">
-          <div class="flex items-center gap-3">
-            <div class="w-7 h-7 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 text-xs">
-              ⚡
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white font-mono">100+</div>
-              <div class="text-[10px] text-slate-400 font-medium">Projects Delivered</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <div class="w-7 h-7 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 text-xs">
-              👥
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white font-mono">100+</div>
-              <div class="text-[10px] text-slate-400 font-medium">Happy Clients</div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <div class="w-7 h-7 rounded-full border border-slate-700 flex items-center justify-center text-slate-400 text-xs">
-              🛡️
-            </div>
-            <div>
-              <div class="text-xl font-bold text-white font-mono">99.9%</div>
-              <div class="text-[10px] text-slate-400 font-medium">Uptime & Reliability</div>
-            </div>
-          </div>
-        </div>
+    <div class="relative w-full h-[300px] lg:h-[500px]">
+      <div class="absolute -top-10 right-0 hidden lg:flex text-[10px] font-mono tracking-widest text-slate-500 gap-3">
+        <span>IDEAS</span> <span class="text-blue-500">→</span> <span>PRODUCTS</span> <span class="text-blue-500">→</span> <span>IMPACT</span>
       </div>
-
-      <!-- Right Column: Realistic Laptop Desk Setup Preview -->
-      <div class="lg:col-span-6 relative flex justify-center">
-        <!-- Ambient desk glow -->
-        <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/10 rounded-3xl blur-2xl -z-10"></div>
-
-        <!-- Laptop Chassis Wrapper -->
-        <div class="w-full max-w-xl bg-slate-900 p-2 sm:p-3 rounded-2xl border border-slate-700 shadow-2xl">
-          <!-- Laptop Screen Frame -->
-          <div class="bg-white rounded-xl overflow-hidden shadow-inner border border-slate-200 text-slate-800">
-            
-            <div class="grid grid-cols-12 min-h-[300px]">
-              <!-- Screen Mini Sidebar -->
-              <div class="col-span-3 bg-[#0a0f1d] text-white p-3 flex flex-col justify-between text-[10px]">
-                <div>
-                  <div class="font-bold text-blue-400 flex items-center gap-1 mb-4">
-                    <span>⚡</span> Solvane
-                  </div>
-                  <div class="space-y-2 text-slate-400">
-                    <div class="bg-blue-600/20 text-blue-300 px-2 py-1 rounded">Overview</div>
-                    <div class="px-2 py-0.5">Invoices</div>
-                    <div class="px-2 py-0.5">Customers</div>
-                    <div class="px-2 py-0.5">Reports</div>
-                    <div class="px-2 py-0.5">Settings</div>
-                  </div>
-                </div>
-                <div class="text-[9px] text-slate-500">v2.4 Production</div>
-              </div>
-
-              <!-- Screen Main Content -->
-              <div class="col-span-9 bg-slate-50 p-4 flex flex-col justify-between">
-                <div>
-                  <div class="flex items-center justify-between border-b border-slate-200 pb-2 mb-3">
-                    <span class="text-xs font-bold text-slate-800">Business Growth</span>
-                    <span class="text-[10px] text-slate-400">Monthly View</span>
-                  </div>
-
-                  <!-- Mini Stats -->
-                  <div class="grid grid-cols-3 gap-2 mb-3">
-                    <div class="bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
-                      <div class="text-[9px] text-slate-400">Revenue</div>
-                      <div class="text-xs font-bold text-slate-800">₹ 2,48,500</div>
-                    </div>
-                    <div class="bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
-                      <div class="text-[9px] text-slate-400">Users</div>
-                      <div class="text-xs font-bold text-slate-800">1,148</div>
-                    </div>
-                    <div class="bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
-                      <div class="text-[9px] text-slate-400">Growth</div>
-                      <div class="text-xs font-bold text-emerald-600">+18%</div>
-                    </div>
-                  </div>
-
-                  <!-- Wave Graph -->
-                  <div class="bg-white p-2 rounded-lg border border-slate-200 shadow-sm">
-                    <svg class="w-full h-16 text-blue-500 stroke-current" viewBox="0 0 300 80" fill="none">
-                      <path d="M0,60 Q40,20 80,45 T160,15 T240,35 T300,5" stroke-width="2" />
-                      <path d="M0,60 Q40,20 80,45 T160,15 T240,35 T300,5 L300,80 L0,80 Z" fill="#3b82f6" fill-opacity="0.08" />
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="text-[9px] text-slate-400 pt-2 flex justify-between">
-                  <span>System load: Optimal</span>
-                  <span>Sync: Live</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&q=80&w=1000" alt="Dashboard Mockup" class="w-full h-full object-cover rounded-xl shadow-[0_0_50px_rgba(37,99,235,0.15)]" />
     </div>
   </div>
 </section>

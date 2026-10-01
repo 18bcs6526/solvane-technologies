@@ -1,0 +1,102 @@
+<div class="min-h-screen bg-[#060a12] text-white pt-32 pb-24 border-t border-slate-800 relative overflow-hidden">
+  
+  <!-- Ambient Background Glow -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+  <div class="max-w-3xl mx-auto px-6 relative z-10">
+    
+    <!-- Header -->
+    <div class="mb-12 text-center">
+      <span class="text-[11px] uppercase font-bold tracking-widest text-blue-400 block mb-3">Partner With Us</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">Start a Conversation</h1>
+      <p class="text-slate-400 text-base">Tell us about your project or business challenge. Our engineering team will review your requirements and get back to you within 24 hours.</p>
+    </div>
+
+    <!-- Success Message Alert -->
+    <div *ngIf="submitSuccess" class="mb-8 p-4 rounded-xl bg-emerald-900/40 border border-emerald-800 text-emerald-400 text-sm flex items-center gap-3 backdrop-blur-sm shadow-lg">
+      <div class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center border border-emerald-500/50">✓</div>
+      <span>Thank you! Your inquiry has been submitted successfully to the Solvane team.</span>
+    </div>
+
+    <!-- Error Message Alert -->
+    <div *ngIf="errorMessage" class="mb-8 p-4 rounded-xl bg-red-900/40 border border-red-800 text-red-400 text-sm flex items-center gap-3 backdrop-blur-sm shadow-lg">
+      <div class="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center border border-red-500/50">✕</div>
+      <span>{{ errorMessage }}</span>
+    </div>
+
+    <!-- Contact Form -->
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="bg-[#0a0f1c]/90 backdrop-blur-md p-8 rounded-2xl border border-slate-800 shadow-2xl space-y-6">
+      
+      <!-- Row 1: Name & Company -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Name <span class="text-blue-500">*</span></label>
+          <input type="text" formControlName="name" placeholder="e.g. Jane Doe" class="w-full bg-[#060a12] border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition" />
+          <span *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid" class="text-[10px] text-red-400 mt-1.5 block">Name is required.</span>
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Company</label>
+          <input type="text" formControlName="company" placeholder="e.g. Acme Corp" class="w-full bg-[#060a12] border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition" />
+        </div>
+      </div>
+
+      <!-- Row 2: Email & Phone -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Email <span class="text-blue-500">*</span></label>
+          <input type="email" formControlName="email" placeholder="jane@example.com" class="w-full bg-[#060a12] border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition" />
+          <span *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid" class="text-[10px] text-red-400 mt-1.5 block">Valid email is required.</span>
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Phone <span class="text-blue-500">*</span></label>
+          <input type="tel" formControlName="phone" placeholder="+91 98765 43210" class="w-full bg-[#060a12] border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition" />
+          <span *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid" class="text-[10px] text-red-400 mt-1.5 block">Valid phone is required.</span>
+        </div>
+      </div>
+
+      <!-- Row 3: Requirement & Budget -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Requirement <span class="text-blue-500">*</span></label>
+          <select formControlName="requirement" class="w-full bg-[#060a12] border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition appearance-none cursor-pointer">
+            <option value="" disabled selected>Select Service</option>
+            <option value="Custom Software Development">Custom Software Development</option>
+            <option value="Cloud Architecture & DevOps">Cloud Architecture & DevOps</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="Dedicated Engineering Team">Dedicated Engineering Team</option>
+          </select>
+          <span *ngIf="contactForm.get('requirement')?.touched && contactForm.get('requirement')?.invalid" class="text-[10px] text-red-400 mt-1.5 block">Please select a service type.</span>
+        </div>
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Budget <span class="text-blue-500">*</span></label>
+          <select formControlName="budget" class="w-full bg-[#060a12] border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition appearance-none cursor-pointer">
+            <option value="" disabled selected>Select Budget Range</option>
+            <option value="$10k - $25k">$10k - $25k</option>
+            <option value="$25k - $50k">$25k - $50k</option>
+            <option value="$50k+">$50k+</option>
+          </select>
+          <span *ngIf="contactForm.get('budget')?.touched && contactForm.get('budget')?.invalid" class="text-[10px] text-red-400 mt-1.5 block">Please select a budget range.</span>
+        </div>
+      </div>
+
+      <!-- Row 4: Message -->
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Project Details <span class="text-blue-500">*</span></label>
+        <textarea rows="5" formControlName="message" class="w-full bg-[#060a12] border border-slate-800 rounded-lg px-4 py-3 text-sm text-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none transition resize-y" placeholder="Tell us a bit about your current challenges, technical debt, or scale goals..."></textarea>
+        <span *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid" class="text-[10px] text-red-400 mt-1.5 block">Message must be at least 10 characters long.</span>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="pt-4 border-t border-slate-800 flex justify-end">
+        <button type="submit" [disabled]="isSubmitting" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-[0_0_20px_rgba(37,99,235,0.2)] transition-all hover:-translate-y-0.5 disabled:opacity-50 disabled:hover:translate-y-0 flex items-center justify-center gap-2">
+          <span *ngIf="isSubmitting" class="flex items-center gap-2">
+            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+            Sending Details...
+          </span>
+          <span *ngIf="!isSubmitting">Submit Inquiry →</span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

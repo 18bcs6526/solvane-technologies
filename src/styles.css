@@ -11,4 +11,7 @@ html {
     @apply bg-brand-dark text-slate-100 font-sans antialiased;
     overflow-x: hidden;
   }
+}html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Prevents the fixed navbar from covering section titles */
 }
